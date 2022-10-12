@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Touché Coulé</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="restart">
+    <p></p>
+    <div class="dilemme">
+      <button id="restartButton">restart</button>
+      <button id="quitButton">Quit</button>
+    </div>
+  </div>
+  <img src="img/giphy.webp" alt="Explosion" id="explosion">
+  <div class="res">
+    <img src="img/porteAvion.png" alt="porte Avion">
+    <img src="img/cuirasse.png" alt="Cuirassé">
+    <img src="img/torpilleurs.png" alt="torpilleur">
+    <img src="img/torpilleurs.png" alt="torpilleur">
+    <img src="img/sousmarin.png" alt="Sous-Marin">
+  </div>
+  <div class="game">
+    <div class="sideHelp letters">
+      <p>A</p>
+      <p>B</p>
+      <p>C</p>
+      <p>D</p>
+      <p>E</p>
+      <p>F</p>
+      <p>G</p>
+      <p>H</p>
+      <p>I</p>
+      <p>J</p>
+    </div>
+    <div class="sideHelp numbers">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+      <p>7</p>
+      <p>8</p>
+      <p>9</p>
+      <p>10</p>
+    </div>
+    <div class="board">
+      <div class="row" id="row-0">
+        <div class="tile" id="tile-0-0" onclick="doClick('tile-0-0')"></div>
+        <div class="tile" id="tile-0-1" onclick="doClick('tile-0-1')"></div>
+        <div class="tile" id="tile-0-2" onclick="doClick('tile-0-2')"></div>
+        <div class="tile" id="tile-0-3" onclick="doClick('tile-0-3')"></div>
+        <div class="tile" id="tile-0-4" onclick="doClick('tile-0-4')"></div>
+        <div class="tile" id="tile-0-5" onclick="doClick('tile-0-5')"></div>
+        <div class="tile" id="tile-0-6" onclick="doClick('tile-0-6')"></div>
+        <div class="tile" id="tile-0-7" onclick="doClick('tile-0-7')"></div>
+        <div class="tile" id="tile-0-8" onclick="doClick('tile-0-8')"></div>
+        <div class="tile" id="tile-0-9" onclick="doClick('tile-0-9')"></div>
+      </div>
+      <div class="row" id="row-1">
+        <div class="tile" id="tile-1-0" onclick="doClick('tile-1-0')"></div>
+        <div class="tile" id="tile-1-1" onclick="doClick('tile-1-1')"></div>
+        <div class="tile" id="tile-1-2" onclick="doClick('tile-1-2')"></div>
+        <div class="tile" id="tile-1-3" onclick="doClick('tile-1-3')"></div>
+        <div class="tile" id="tile-1-4" onclick="doClick('tile-1-4')"></div>
+        <div class="tile" id="tile-1-5" onclick="doClick('tile-1-5')"></div>
+        <div class="tile" id="tile-1-6" onclick="doClick('tile-1-6')"></div>
+        <div class="tile" id="tile-1-7" onclick="doClick('tile-1-7')"></div>
+        <div class="tile" id="tile-1-8" onclick="doClick('tile-1-8')"></div>
+        <div class="tile" id="tile-1-9" onclick="doClick('tile-1-9')"></div>
+      </div>
+      <div class="row" id="row-2">
+        <div class="tile" id="tile-2-0" onclick="doClick('tile-2-0')"></div>
+        <div class="tile" id="tile-2-1" onclick="doClick('tile-2-1')"></div>
+        <div class="tile" id="tile-2-2" onclick="doClick('tile-2-2')"></div>
+        <div class="tile" id="tile-2-3" onclick="doClick('tile-2-3')"></div>
+        <div class="tile" id="tile-2-4" onclick="doClick('tile-2-4')"></div>
+        <div class="tile" id="tile-2-5" onclick="doClick('tile-2-5')"></div>
+        <div class="tile" id="tile-2-6" onclick="doClick('tile-2-6')"></div>
+        <div class="tile" id="tile-2-7" onclick="doClick('tile-2-7')"></div>
+        <div class="tile" id="tile-2-8" onclick="doClick('tile-2-8')"></div>
+        <div class="tile" id="tile-2-9" onclick="doClick('tile-2-9')"></div>
+      </div>
+      <div class="row" id="row-3">
+        <div class="tile" id="tile-3-0" onclick="doClick('tile-3-0')"></div>
+        <div class="tile" id="tile-3-1" onclick="doClick('tile-3-1')"></div>
+        <div class="tile" id="tile-3-2" onclick="doClick('tile-3-2')"></div>
+        <div class="tile" id="tile-3-3" onclick="doClick('tile-3-3')"></div>
+        <div class="tile" id="tile-3-4" onclick="doClick('tile-3-4')"></div>
+        <div class="tile" id="tile-3-5" onclick="doClick('tile-3-5')"></div>
+        <div class="tile" id="tile-3-6" onclick="doClick('tile-3-6')"></div>
+        <div class="tile" id="tile-3-7" onclick="doClick('tile-3-7')"></div>
+        <div class="tile" id="tile-3-8" onclick="doClick('tile-3-8')"></div>
+        <div class="tile" id="tile-3-9" onclick="doClick('tile-3-9')"></div>
+      </div>
+      <div class="row" id="row-4">
+        <div class="tile" id="tile-4-0" onclick="doClick('tile-4-0')"></div>
+        <div class="tile" id="tile-4-1" onclick="doClick('tile-4-1')"></div>
+        <div class="tile" id="tile-4-2" onclick="doClick('tile-4-2')"></div>
+        <div class="tile" id="tile-4-3" onclick="doClick('tile-4-3')"></div>
+        <div class="tile" id="tile-4-4" onclick="doClick('tile-4-4')"></div>
+        <div class="tile" id="tile-4-5" onclick="doClick('tile-4-5')"></div>
+        <div class="tile" id="tile-4-6" onclick="doClick('tile-4-6')"></div>
+        <div class="tile" id="tile-4-7" onclick="doClick('tile-4-7')"></div>
+        <div class="tile" id="tile-4-8" onclick="doClick('tile-4-8')"></div>
+        <div class="tile" id="tile-4-9" onclick="doClick('tile-4-9')"></div>
+      </div>
+      <div class="row" id="row-5">
+        <div class="tile" id="tile-5-0" onclick="doClick('tile-5-0')"></div>
+        <div class="tile" id="tile-5-1" onclick="doClick('tile-5-1')"></div>
+        <div class="tile" id="tile-5-2" onclick="doClick('tile-5-2')"></div>
+        <div class="tile" id="tile-5-3" onclick="doClick('tile-5-3')"></div>
+        <div class="tile" id="tile-5-4" onclick="doClick('tile-5-4')"></div>
+        <div class="tile" id="tile-5-5" onclick="doClick('tile-5-5')"></div>
+        <div class="tile" id="tile-5-6" onclick="doClick('tile-5-6')"></div>
+        <div class="tile" id="tile-5-7" onclick="doClick('tile-5-7')"></div>
+        <div class="tile" id="tile-5-8" onclick="doClick('tile-5-8')"></div>
+        <div class="tile" id="tile-5-9" onclick="doClick('tile-5-9')"></div>
+      </div>
+      <div class="row" id="row-6">
+        <div class="tile" id="tile-6-0" onclick="doClick('tile-6-0')"></div>
+        <div class="tile" id="tile-6-1" onclick="doClick('tile-6-1')"></div>
+        <div class="tile" id="tile-6-2" onclick="doClick('tile-6-2')"></div>
+        <div class="tile" id="tile-6-3" onclick="doClick('tile-6-3')"></div>
+        <div class="tile" id="tile-6-4" onclick="doClick('tile-6-4')"></div>
+        <div class="tile" id="tile-6-5" onclick="doClick('tile-6-5')"></div>
+        <div class="tile" id="tile-6-6" onclick="doClick('tile-6-6')"></div>
+        <div class="tile" id="tile-6-7" onclick="doClick('tile-6-7')"></div>
+        <div class="tile" id="tile-6-8" onclick="doClick('tile-6-8')"></div>
+        <div class="tile" id="tile-6-9" onclick="doClick('tile-6-9')"></div>
+      </div>
+      <div class="row" id="row-7">
+        <div class="tile" id="tile-7-0" onclick="doClick('tile-7-0')"></div>
+        <div class="tile" id="tile-7-1" onclick="doClick('tile-7-1')"></div>
+        <div class="tile" id="tile-7-2" onclick="doClick('tile-7-2')"></div>
+        <div class="tile" id="tile-7-3" onclick="doClick('tile-7-3')"></div>
+        <div class="tile" id="tile-7-4" onclick="doClick('tile-7-4')"></div>
+        <div class="tile" id="tile-7-5" onclick="doClick('tile-7-5')"></div>
+        <div class="tile" id="tile-7-6" onclick="doClick('tile-7-6')"></div>
+        <div class="tile" id="tile-7-7" onclick="doClick('tile-7-7')"></div>
+        <div class="tile" id="tile-7-8" onclick="doClick('tile-7-8')"></div>
+        <div class="tile" id="tile-7-9" onclick="doClick('tile-7-9')"></div>
+      </div>
+      <div class="row" id="row-8">
+        <div class="tile" id="tile-8-0" onclick="doClick('tile-8-0')"></div>
+        <div class="tile" id="tile-8-1" onclick="doClick('tile-8-1')"></div>
+        <div class="tile" id="tile-8-2" onclick="doClick('tile-8-2')"></div>
+        <div class="tile" id="tile-8-3" onclick="doClick('tile-8-3')"></div>
+        <div class="tile" id="tile-8-4" onclick="doClick('tile-8-4')"></div>
+        <div class="tile" id="tile-8-5" onclick="doClick('tile-8-5')"></div>
+        <div class="tile" id="tile-8-6" onclick="doClick('tile-8-6')"></div>
+        <div class="tile" id="tile-8-7" onclick="doClick('tile-8-7')"></div>
+        <div class="tile" id="tile-8-8" onclick="doClick('tile-8-8')"></div>
+        <div class="tile" id="tile-8-9" onclick="doClick('tile-8-9')"></div>
+      </div>
+      <div class="row" id="row-9">
+        <div class="tile" id="tile-9-0" onclick="doClick('tile-9-0')"></div>
+        <div class="tile" id="tile-9-1" onclick="doClick('tile-9-1')"></div>
+        <div class="tile" id="tile-9-2" onclick="doClick('tile-9-2')"></div>
+        <div class="tile" id="tile-9-3" onclick="doClick('tile-9-3')"></div>
+        <div class="tile" id="tile-9-4" onclick="doClick('tile-9-4')"></div>
+        <div class="tile" id="tile-9-5" onclick="doClick('tile-9-5')"></div>
+        <div class="tile" id="tile-9-6" onclick="doClick('tile-9-6')"></div>
+        <div class="tile" id="tile-9-7" onclick="doClick('tile-9-7')"></div>
+        <div class="tile" id="tile-9-8" onclick="doClick('tile-9-8')"></div>
+        <div class="tile" id="tile-9-9" onclick="doClick('tile-9-9')"></div>
+      </div>
+    </div>
+    <div class="sideHelp numbers">
+      <p>1</p>
+      <p>2</p>
+      <p>3</p>
+      <p>4</p>
+      <p>5</p>
+      <p>6</p>
+      <p>7</p>
+      <p>8</p>
+      <p>9</p>
+      <p>10</p>
+    </div>
+    <div class="sideHelp letters">
+      <p>A</p>
+      <p>B</p>
+      <p>C</p>
+      <p>D</p>
+      <p>E</p>
+      <p>F</p>
+      <p>G</p>
+      <p>H</p>
+      <p>I</p>
+      <p>J</p>
+    </div>
+  </div>
+  <div class="try">
+    <p id='tries'>Try it!</p>
+  </div>
+  <script src="./app.js"></script>
+</body>
+</html>
