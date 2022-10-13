@@ -80,7 +80,12 @@ function searchInBoatPosition(x,y){
 function loadResult(id,x,y){
     // console.log('boat '+id+' is touch in '+x+','+y);
     boatFind[id].push([x,y])
-    if(boatFind[id].length==5-id || boatFind[id].length==id){
+    if(id!=3 && id!=4){
+        if(boatFind[id].length==5-id){
+            placeExplosionCross(id)
+            boatFind[id].push('complete')
+        }
+    }else if(boatFind[3].length==3 || boatFind[4].length==2){
         placeExplosionCross(id)
         boatFind[id].push('complete')
     }
@@ -116,9 +121,6 @@ function doClick(id) {
         }
     }
 }
-
-
-
 
 function testState(id){
     let newCase=document.querySelector('#'+id);
